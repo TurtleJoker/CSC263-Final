@@ -9,10 +9,10 @@ incidentID is primary key
 Jobs(jobID, jobTitle)
 jobID is primary key
 
-Teams(teamID, teamName)
+Teams(teamID, personID, teamName)
 teamID is primary key
 
-People(personID, firstName, lastName, jobID, teamID, email)
+People(personID, firstName, lastName, jobID, email)
 personID is primary key
 
 Incidents_IPAddresses(ipAddress, incidentID, handlerID, reason)
