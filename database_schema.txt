@@ -1,0 +1,29 @@
+Database Design Schema
+
+IncidentTypes(typeID, typeName)
+typeID is primary key
+
+Incidents(incidentID, typeID, date, state(opened/closed/stalled))
+incidentID is primary key
+
+Jobs(jobID, jobTitle)
+jobID is primary key
+
+Teams(teamID, teamName)
+teamID is primary key
+
+People(personID, firstName, lastName, jobID, teamID, email)
+personID is primary key
+
+IPAddresses(ipID, address)
+ipID is primary key
+
+Incidents_IPAddresses(incidentID, ipID, handlerID, reason)
+incidentID, ipID and handlerID are primary keys
+incidentID
+
+Incidents_People(incidentID, personID, handlerID, reason)
+
+
+Incidents_Comments(commentID, IncidentID, handlerID, comment, date)
+commentID is primary key
