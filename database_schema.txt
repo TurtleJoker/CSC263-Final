@@ -3,7 +3,7 @@ Database Design Schema
 IncidentTypes(typeID, typeName)
 typeID is primary key
 
-Incidents(incidentID, typeID, date, state(opened/closed/stalled))
+Incidents(incidentID, typeID, date, state(opened/closed/stalled), comments)
 incidentID is primary key
 
 Jobs(jobID, jobTitle)
