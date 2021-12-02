@@ -5,21 +5,29 @@ typeID is primary key
 
 Incidents(incidentID, typeID, date, state(opened/closed/stalled), comments)
 incidentID is primary key
+typeID is a foreign key that refers to IncidentTypes.
 
 Jobs(jobID, jobTitle)
 jobID is primary key
 
 Teams(teamID, personID, teamName)
 teamID is primary key
+personID is a foreign key that refers to People.
 
 People(personID, firstName, lastName, jobID, email)
 personID is primary key
+jobID is a foreign key that refers to Jobs.
 
-Incidents_IPAddresses(ipAddress, incidentID, handlerID, reason)
+Incidents_IPAddresses(ipAddress, incidentID, handlerID)
 ipAddress is the primary key.
+incidentID is a foreign key that refers to Incidents.
+handlerID is a foreign key that refers to Handler.
 
 Handler(handlerID, incidentID, personID, reason)
 handlerId is primary key
+personID is a foreign key that refers to People.
 
-Incidents_Comments(commentID, IncidentID, handlerID, comments, date)
+Incidents_Comments(commentID, incidentID, handlerID, comments, date)
 commentID is primary key
+incidentID is a foreign key that refers to Incidents.
+handlerID is a foreign key that refers to Handler.
