@@ -22,7 +22,7 @@ Incidents_IPAddresses(incidentID, ipID, handlerID, reason)
 incidentID, ipID and handlerID are primary keys
 incidentID
 
-Incidents_People(incidentID, personID, handlerID, reason)
+Handler(handlerID, incidentID, personID, reason)
 
 
 Incidents_Comments(commentID, IncidentID, handlerID, comment, date)
