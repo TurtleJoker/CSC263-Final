@@ -20,7 +20,6 @@ ipID is primary key
 
 Incidents_IPAddresses(incidentID, ipID, handlerID, reason)
 incidentID, ipID and handlerID are primary keys
-incidentID
 
 Handler(handlerID, incidentID, personID, reason)
 
