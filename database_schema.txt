@@ -27,7 +27,8 @@ handlerID is a foreign key that refers to Handler.
 Handler(handlerID, incidentID, personID, reason)
 handlerId is primary key
 personID is a foreign key that refers to People.
+incidentID is a foreign key that refers to Incidents.
 
-Incidents_Comments(commentID, handlerID, comments, date)
+Incidents_Comments(commentID, handlerID, comments, date, ipAddress)
 commentID is primary key
 handlerID is a foreign key that refers to Handler.
