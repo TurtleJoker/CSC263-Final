@@ -8,16 +8,12 @@ incidentID is primary key
 typeID is a foreign key that refers to IncidentTypes.
 commentID is a foreign key that refers to Incidents_Comments.
 
-Jobs(jobID, jobTitle)
-jobID is primary key
-
 Teams(teamID, personID, teamName)
 teamID is primary key
 personID is a foreign key that refers to People.
 
-People(personID, firstName, lastName, jobID, email)
+People(personID, firstName, lastName, jobTitle, email)
 personID is primary key
-jobID is a foreign key that refers to Jobs.
 
 Incidents_IPAddresses(ipAddress, incidentID, handlerID)
 ipAddress is the primary key.
