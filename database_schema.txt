@@ -3,9 +3,10 @@ Database Design Schema
 IncidentTypes(typeID, typeName)
 typeID is primary key
 
-Incidents(incidentID, typeID, date, state(opened/closed/stalled), comments)
+Incidents(incidentID, typeID, date, state(opened/closed/stalled), commentID)
 incidentID is primary key
 typeID is a foreign key that refers to IncidentTypes.
+commentID is a foreign key that refers to Incidents_Comments.
 
 Jobs(jobID, jobTitle)
 jobID is primary key
@@ -27,7 +28,6 @@ Handler(handlerID, incidentID, personID, reason)
 handlerId is primary key
 personID is a foreign key that refers to People.
 
-Incidents_Comments(commentID, incidentID, handlerID, comments, date)
+Incidents_Comments(commentID, handlerID, comments, date)
 commentID is primary key
-incidentID is a foreign key that refers to Incidents.
 handlerID is a foreign key that refers to Handler.
