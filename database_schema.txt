@@ -3,7 +3,7 @@ Database Design Schema
 IncidentTypes(typeID, typeName)
 typeID is primary key
 
-Incidents(incidentID, typeID, date, state(opened/closed/stalled), commentID)
+Incidents(incidentID, typeID, personID, ipAddress, handlerID, date, state(opened/closed/stalled), commentID)
 incidentID is primary key
 typeID is a foreign key that refers to IncidentTypes.
 commentID is a foreign key that refers to Incidents_Comments.
