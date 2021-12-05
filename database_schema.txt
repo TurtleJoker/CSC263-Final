@@ -32,3 +32,4 @@ incidentID is a foreign key that refers to Incidents.
 Incidents_Comments(commentID, handlerID, comments, date, ipAddress)
 commentID is primary key
 handlerID is a foreign key that refers to Handler.
+ipAddress is a foreign key that refers to Incidents_IPAddresses.
