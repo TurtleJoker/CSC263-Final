@@ -6,6 +6,7 @@ typeID is primary key
 Incidents(incidentID, typeID, personID, date, state(opened/closed/stalled))
 incidentID is primary key
 typeID is a foreign key that refers to IncidentTypes.
+personID is a foreign that refers to People.
 
 Teams(teamID, personID, teamName)
 teamID is primary key
