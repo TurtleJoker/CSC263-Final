@@ -15,10 +15,9 @@ personID is a foreign key that refers to People.
 People(personID, firstName, lastName, jobTitle, email)
 personID is primary key
 
-Incidents_IPAddresses(ipAddress, incidentID, handlerID)
+Incidents_IPAddresses(ipAddress, incidentID)
 ipAddress is the primary key.
 incidentID is a foreign key that refers to Incidents.
-handlerID is a foreign key that refers to Handler.
 
 Handler(handlerID, incidentID, personID, reason)
 handlerId is primary key
