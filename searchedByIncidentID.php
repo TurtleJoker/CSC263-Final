@@ -22,6 +22,7 @@
 
         echo "Established connection with the database!";
     
+           // SQL Query, given the incidentID submitted by incident responder.
            $sql = "SELECT Incidents.typeID, Incidents.personID, Incidents.date, Incidents.state, Incidents_IPAddresses.ipAddress, Handler.handlerID, Incidents_Comments.commentID
                    FROM Incidents, Handler, Incidents_IPAddresses, Incidents_Comments
                    WHERE Incidents_Comments.handlerID = Handler.handlerID
@@ -32,7 +33,8 @@
                    AND Incidents.incidentID = ". $_POST["incidentID"] . ";";
   
         $result = $conn->query($sql);
-  
+        
+        // Creates table for data obtained through the query.
         if ($result->num_rows > 0){
         echo "<table><tr><th>Type ID</th><th>Person ID</th><th>Date</th><th>State</th><th>IP Address</th><th>Handler ID</th><th>Comment ID</th></tr>";
           while ($row = $result->fetch_assoc()) {
