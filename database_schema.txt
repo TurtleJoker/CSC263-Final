@@ -1,5 +1,8 @@
 Database Design Schema
 
+login(username, password)
+password is primary key
+
 IncidentTypes(typeID, typeName)
 typeID is primary key
 
