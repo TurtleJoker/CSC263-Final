@@ -10,7 +10,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "red@1234"; // TO TEST INDIVIDUALLY, ENTER YOUR SQL PASSWORD AS IT IS ON YOUR SYSTEM.
-        $dbname = " "; // BEFORE USING THIS .php FILE, ENTER THE DATABASE NAME WERE USING.
+        $dbname = "securitydb"; // AGREED NAME OF OUR DATABASE.
       
         // Attempt to connect to the database in SQL.
         $conn = new mysqli($servername, $username, $password, $dbname);
