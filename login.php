@@ -1,5 +1,5 @@
 <?php
-inculde('connection.php');
+include('connection.php');
 $username = $POST['user'];
 $password = $POST['password'];
 
