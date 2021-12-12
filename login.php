@@ -1,7 +1,7 @@
 <?php
 include('connection.php');
-$username = $POST['user'];
-$password = $POST['password'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $sql = "SELECT * FROM login WHERE (username = '$username') AND (password ='$password') limit 1";
 
