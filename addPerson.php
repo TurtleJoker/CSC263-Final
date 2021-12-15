@@ -1,15 +1,15 @@
 <?php
     include('connection.php');
-    $incidentId = $_POST['incidentId'];
-    $lastName = $_POST['lastName'];
-    $firstName = $_POST['firstName'];
+    $personID = $_POST['personID'];
+    $firstName = $_POST['firstname'];
+    $lastName = $_POST['lastname'];
     $jobTitle = $_POST['jobTitle'];
-    $emailAddress = $_POST['emailAddress'];
-    $association = $_POST['association'];
+    $email = $_POST['email'];
 
 
-    $sql="INSERT INTO PEOPLE(incidentID,lastName,firstName,jobTitle,email, personAssociation)
-    VALUES('$incidentId','$lastName','$firstName','$jobTitle','$emailAddress','$association')";
+
+    $sql="INSERT INTO PEOPLE(personID,firstname,lastname,jobTitle,email)
+    VALUES('$personID','$firstName','$lastName','$jobTitle','$email')";
 
 
     if($conn->query($sql)){
@@ -18,16 +18,16 @@
 
         $url = "index.html";
 
-        echo "<meta http-equiv='Refresh' content='3;URL=$url'>";
+        echo "<meta http-equiv='Refresh' content='30;URL=$url'>";
 
     }else{
 
         echo '<p style="font-size:24pt;color:black;text-align:center">'."There was an error! Please resubmit.".'<p>';
 
 
-        $url1 = "addPerson.html";
+        $url1 = "addremovePeople.html";
 
-        echo "<meta http-equiv='Refresh' content='3;URL=$url1'>";
+        echo "<meta http-equiv='Refresh' content='30;URL=$url1'>";
 
 
     }
