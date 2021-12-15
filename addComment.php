@@ -1,5 +1,5 @@
 <?php
-    include('connect.php');
+    include('connection.php');
     $incidentID = $_POST['incidentId'];
     $commentDate = date('Y/m/d');
     $comment = $_POST['comments'];
