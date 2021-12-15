@@ -1,4 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Logging in...</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        CSIRT
+      </h1>
+      <h4>
+        Computer Security Incident Response Teams
+      </h4>
+    </header>
+    <?php
 include('connection.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -17,8 +34,11 @@ if($row == 0) {
     echo "<meta http-equiv='Refresh' content='0; URL = $url'>";
 }
 
-echo $username; // FOR TESTING PURPOSES. MAKING SURE THE PHP FILE TOOK IN THE VALUES SUBMITTED. USING ECHO.
-echo $password; // FOR TESTING PURPOSES. MAKING SURE THE PHP FILE TOOK IN THE VALUES SUBMITTED. USING ECHO.
+echo "<div class='diff'><h5>Redirecting to... <a href='index.html'>HOME</a></h5></div>";
 
 $conn->close();
 ?>
+    <h2>Powered by Runtime Errors</h2>
+  </body>
+
+</html>
