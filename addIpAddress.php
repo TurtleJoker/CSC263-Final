@@ -1,5 +1,5 @@
 <?php
-    include('connect.php');
+    include('connection.php');
     $incidentId = $_POST['incidentId'];
     $ipAddress = $_POST['ipAddress'];
     $association = $_POST['association'];
