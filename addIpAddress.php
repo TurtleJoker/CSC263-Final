@@ -1,12 +1,12 @@
 <?php
     include('connection.php');
-    $incidentId = $_POST['incidentId'];
     $ipAddress = $_POST['ipAddress'];
-    $association = $_POST['association'];
+    $incidentID = $_POST['incidentID'];
+    $handler = $_POST['handlerID'];
 
 
-    $sql="INSERT INTO IPADDRESS(incidentID,ipAddress,ipAssociation)
-    VALUES('$incidentId','$ipAddress','$association')";
+    $sql="INSERT INTO incidents_ipAddresses
+    VALUES('$ipAddress', '$incidentID', '$handler')";
 
 
     if($conn->query($sql)){
@@ -22,7 +22,7 @@
         echo '<p style="font-size:24pt;color:black;text-align:center">'."There was an error! Please resubmit.".'<p>';
 
 
-        $url1 = "addIpAddress.html";
+        $url1 = "addremoveipAddress.html";
 
         echo "<meta http-equiv='Refresh' content='3;URL=$url1'>";
 
