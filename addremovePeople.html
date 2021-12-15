@@ -16,9 +16,9 @@
       </h4>
     </header>
     <div class="addpeople">
-
+	<h5> Add </h5>
       <form method="post" action="addPerson.php">
-        <label for="personID">Person ID *</label><br>
+        <label for="personID">Person ID </label><br>
         <input type="text" name="personID">
         <br>
         <label for="firstname">First Name</label><br>
@@ -35,15 +35,13 @@
         <br><br>
         <button type="submit">Add</button>
       </form>
-    </div>
-    <h6>*only need Person ID to remove, need all boxes filled for add</h6>
-    
-    <form method="post" action="removePerson.php">
-        <label for="personID">Person ID *</label><br>
-        <input type="text" name="personID">
+	<h5>Remove</h5>
+	<form method="post" action="removePerson.php">
+        <label for="personID">Person ID </label><br>
+        <input type="text" name="personID"> <br><br>
         <button type="submit">Remove</button>
     </form>
-        <br>
+    </div>
     <h2>Powered by Runtime Errors</h2>
   </body>
 
