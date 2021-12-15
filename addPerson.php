@@ -1,5 +1,5 @@
 <?php
-    include('connect.php');
+    include('connection.php');
     $incidentId = $_POST['incidentId'];
     $lastName = $_POST['lastName'];
     $firstName = $_POST['firstName'];
