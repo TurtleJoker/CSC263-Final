@@ -17,7 +17,7 @@
     </header>
     <div class="addpeople">
 
-      <form method="post">
+      <form method="post" action="addPerson.php">
         <label for="personID">Person ID *</label><br>
         <input type="text" name="personID">
         <br>
@@ -33,11 +33,17 @@
         <label for="email">Email Address</label><br>
         <input type="emailaddress" name="email">
         <br><br>
-        <button type="submit" action="addPerson.php">Add</button>
-        <button type="submit" action="removePerson.php">Remove</button>
+        <button type="submit">Add</button>
       </form>
     </div>
     <h6>*only need Person ID to remove, need all boxes filled for add</h6>
+    
+    <form method="post" action="removePerson.php">
+        <label for="personID">Person ID *</label><br>
+        <input type="text" name="personID">
+        <button type="submit">Remove</button>
+    </form>
+        <br>
     <h2>Powered by Runtime Errors</h2>
   </body>
 
