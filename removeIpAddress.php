@@ -2,7 +2,7 @@
     include('connection.php');
 
 
-    $sql="DELETE INTO incidents_ipAddresses
+    $sql="DELETE FROM incidents_ipAddresses
     WHERE ipAddress = ". $_POST['ipAddress'] ."; ";
 
 
