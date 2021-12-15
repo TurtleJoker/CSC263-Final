@@ -1,7 +1,7 @@
 <?php
     include('connection.php');
     $incidentID = $_POST['incidentId'];
-    $commentDate = date('Y/m/d');
+    $commentDate = $_POST['date'];
     $comment = $_POST['comments'];
     $handlerName = $_POST['handlerName'];
 
