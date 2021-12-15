@@ -1,9 +1,9 @@
 <?php
     include('connection.php');
-
+    $ipAddress = $_POST['ipAddress'];
 
     $sql="DELETE FROM incidents_ipAddresses
-    WHERE ipAddress = ". $_POST['ipAddress'] ."; ";
+    WHERE ipAddress = '$ipAddress'; ";
 
 
     if($conn->query($sql)){
