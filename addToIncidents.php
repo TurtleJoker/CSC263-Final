@@ -2,9 +2,17 @@
 <html>
 <head>
   <title> Attempt To Connect To Database (Adding Incident) </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1> Connect To Database (PHP) </h1>
+  <header>
+      <h1>
+        CSIRT
+      </h1>
+      <h4>
+        Computer Security Incident Response Teams
+      </h4>
+    </header>
   <?php
     
 	  include('connection.php');
@@ -24,7 +32,7 @@
 
         	$url = "index.html";
 
-       	      echo "<meta http-equiv='Refresh' content='3;URL=$url'>";
+       	      echo "<meta http-equiv='Refresh' content='2;URL=$url'>";
 
           }
 	  else{
@@ -33,7 +41,7 @@
 
        		 $url1 = "addToIncidents.html";
 
-        	echo "<meta http-equiv='Refresh' content='3;URL=$url1'>";
+        	echo "<meta http-equiv='Refresh' content='2;URL=$url1'>";
        
 	  } //end of the main if statement
     $conn -> close();
