@@ -2,6 +2,7 @@
 <html>
 <head>
   <title> Attempt To Connect To Database (Adding Incident) </title>
+</head>
 <body>
   <h1> Connect To Database (PHP) </h1>
   <p><?php
@@ -33,26 +34,17 @@
           $state = $_POST['state'];
           $insertingValues = "INSERT INTO incidents(incidentID, typeID, personID, date, state) VALUES
                         ('$incidID', '$tID', '$perID', '$date', '$state')";
-          $query = mysqli_query($insertingValues);
+          $query = $conn -> query($insertingValues);
        
           if (!$query) 
           {
               die('ERROR: Unable to record addition to the database.');
           }
        
+	$conn -> close();
       } //end of the main if statement
     
-    
     ?></p>
-  
-<!POCTYPE html>
-<html>
-    <head>
-        <title>Incident Record Success</title>
-    </head>
-    <body>
-    <?php
-    echo "Successfully added requested record to the database";
-    ?>
-    </body>
+ 
+  </body>
 </html>
