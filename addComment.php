@@ -1,12 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Adding Comments...</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        CSIRT
+      </h1>
+      <h4>
+        Computer Security Incident Response Teams
+      </h4>
+    </header>
+
 <?php
     include('connection.php');
-    $incidentID = $_POST['incidentId'];
-    $commentDate = $_POST['date'];
+    $commentID = $_POST['commentID'];
+    $handlerID = $_POST['handlerID'];
     $comment = $_POST['comments'];
-    $handlerName = $_POST['handlerName'];
-
-    $sql1="INSERT INTO COMMENTS(incidentID, commentDate, comment, handlerName)
-          VALUES ('$incidentID','$commentDate','$comment','$handlerName')";
+    $commentDate = date('Y-m-d', strtotime($_POST['date']));
+    $ipAdd = $_POST['ipAddress'];
+   
+    $sql1="INSERT INTO incidents_comments
+          VALUES ('$commentID','$handlerID','$comment','$commentDate', '$ipAdd');";
 
 
     if($conn->query($sql1)){
@@ -15,7 +34,7 @@
 
         $url = "index.html";
 
-        echo "<meta http-equiv='Refresh' content='3;URL=$url'>";
+        echo "<meta http-equiv='Refresh' content='30;URL=$url'>";
 
     }else{
 
@@ -24,7 +43,7 @@
 
         $url1 = "addComment.html";
 
-        echo "<meta http-equiv='Refresh' content='3;URL=$url1'>";
+        echo "<meta http-equiv='Refresh' content='30;URL=$url1'>";
 
 
     }
@@ -35,3 +54,8 @@
 
         $conn->close();
 ?>
+<h2>Powered by Runtime Errors</h2>
+  </body>
+
+</html>
+
