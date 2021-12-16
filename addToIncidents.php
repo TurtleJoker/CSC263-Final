@@ -33,13 +33,16 @@
           $state = $_POST['state'];
           $insertingValues = "INSERT INTO incidents(incidentID, typeID, personID, date, state) VALUES
                         ('$incidID', '$tID', '$perID', '$date', '$state')";
+          $query = mysqli_query($insertingValues);
        
-          if (!mysqli_query($conn, $insertingValues)) 
+          if (!$query) 
           {
               die('ERROR: Unable to record addition to the database.');
           }
        
       } //end of the main if statement
+    
+    
     ?></p>
   
 <!POCTYPE html>
