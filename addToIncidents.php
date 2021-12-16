@@ -5,27 +5,9 @@
 </head>
 <body>
   <h1> Connect To Database (PHP) </h1>
-  <p><?php
+  <?php
     
-     if (isset($_POST['submitted'])) 
-     {
-       
-          // We need a server name,  username, password, and the database we are using in order to connect to the database.
-          $servername = "localhost";
-          $username = "root";
-          $password = "red@1234"; // TO TEST INDIVIDUALLY, ENTER YOUR SQL PASSWORD AS IT IS ON YOUR SYSTEM.
-          $dbname = "securitydb"; // AGREED NAME OF OUR DATABASE.
-
-          // Attempt to connect to the database in SQL.
-          $conn = new mysqli($servername, $username, $password, $dbname);
-
-          // In the case that connection fails.
-          if ($conn->connect_error)
-          {
-             die("<p style='color:red'>" . "Unable to connect to the database: " . $conn->connect_error . "</p>");
-          }
-
-          echo "Connected to the database, attempting to record incident...";
+	  include('connection.php');
 
           $incidID = $_POST['incidentID'];
           $tID = $_POST['typeID'];
@@ -34,17 +16,28 @@
           $state = $_POST['state'];
           $insertingValues = "INSERT INTO incidents(incidentID, typeID, personID, date, state) VALUES
                         ('$incidID', '$tID', '$perID', '$date', '$state')";
-          $query = $conn -> query($insertingValues);
+  
        
-          if (!$query) 
+          if ($conn -> query($insertingValues) 
           {
-              die('ERROR: Unable to record addition to the database.');
+              echo '<p style="font-size:16pt;color:Black;text-align:center">'."Incident recorded. Redirecting to home page.".'<p>';
+
+        	$url = "index.html";
+
+       	      echo "<meta http-equiv='Refresh' content='3;URL=$url'>";
+
           }
+	  else{
+
+        	echo '<p style="font-size:16pt;color:Red;text-align:center">'."Error. Requiring resubmission.".'<p>';
+
+       		 $url1 = "addToIncidents.html";
+
+        	echo "<meta http-equiv='Refresh' content='3;URL=$url1'>";
        
-	$conn -> close();
-      } //end of the main if statement
-    
-    ?></p>
+	  } //end of the main if statement
+    $conn -> close();
+    ?>
  
   </body>
 </html>
