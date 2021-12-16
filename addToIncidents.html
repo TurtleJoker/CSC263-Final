@@ -1,0 +1,48 @@
+<!DOCTYPE hmtl>
+<html>
+
+  <head>
+    <title>Add Incident to DB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        CSIRT
+      </h1>
+      <h4>
+        Computer Security Incident Response Teams
+      </h4>
+    </header>
+    <div class="addToIncidents">
+      <h2>Add Incident</h2>
+      <form method="post" action="addToIncidents.php">
+        <label for="incidentID">Incident ID: </label><br>
+        <input type="text" name="incidentID" value=""><br>
+
+        <label for="typeID">Type ID: </label><br>
+        <input type="text" name="typeID" value=""><br>
+
+        <label for="personID">Person ID: </label><br>
+        <input type="text" name="personID" value=""><br>
+
+        <label for="date">Date: </label><br>
+        <input type="date" name="date" value=""><br><br>
+
+        <label for="state">What state is the incident in? </label><br>
+        <input type="radio" name="state" value="Open">Open<br>
+        <input type="radio" name="state" value="Closed">Closed<br>
+        <input type="radio" name="state" value="Stalled">Stalled<br>
+
+        <br>
+        <input type="submit" value="Submit">
+
+      </form>
+    </div>
+
+    <h2>Powered by Runtime Errors</h2>
+
+  </body>
+
+</html>
