@@ -18,7 +18,7 @@
                         ('$incidID', '$tID', '$perID', '$date', '$state')";
   
        
-          if ($conn -> query($insertingValues) 
+          if ($conn -> query($insertingValues))
           {
               echo '<p style="font-size:16pt;color:Black;text-align:center">'."Incident recorded. Redirecting to home page.".'<p>';
 
