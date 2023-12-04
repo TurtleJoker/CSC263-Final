@@ -9,7 +9,7 @@
         // We need a server name,  username, password, and the database we are using in order to connect to the database.
         $servername = "localhost";
         $username = "root";
-        $password = "red@1234"; // TO TEST INDIVIDUALLY, ENTER YOUR SQL PASSWORD AS IT IS ON YOUR SYSTEM.
+        $password = ""; // TO TEST INDIVIDUALLY, ENTER YOUR SQL PASSWORD AS IT IS ON YOUR SYSTEM.
         $dbname = "securitydb"; // AGREED NAME OF OUR DATABASE.
       
         // Attempt to connect to the database in SQL.
